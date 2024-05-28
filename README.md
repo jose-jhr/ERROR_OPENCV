@@ -30,7 +30,7 @@ buildConfig true: Esta configuración permite generar una clase de configuració
 
 ![image](https://github.com/jose-jhr/ERROR_OPENCV/assets/66834393/0cc02394-7131-4ecb-9116-fbe632ee83bb)
 
-
+``` JAVA
 private void starCamera() {
         cameraJhr.addlistenerBitmap(new BitmapResponse() {
             @Override
@@ -50,3 +50,4 @@ private void starCamera() {
         cameraJhr.initBitmap();
         cameraJhr.start(0,0,previewImg,true,false,true);
     }
+```
