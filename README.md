@@ -15,6 +15,9 @@ plugins {
 
 en MyApplication/opencv/build.gradle (fix from this):
 ```
+
+namespace 'org.opencv'
+    
 buildFeatures{
       aidl true
       buildConfig true
