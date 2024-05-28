@@ -2,6 +2,7 @@
 
 https://opencv.org/releases/
 
+![image](https://github.com/jose-jhr/ERROR_OPENCV/assets/66834393/d1c5d4fc-6b21-4fb4-8386-52f30017eda9)
 
 Adicionar en error de namespace
 
