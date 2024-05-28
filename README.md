@@ -26,3 +26,24 @@ aidl true: Esto indica que se habilitará el soporte para la interfaz de definic
 buildConfig true: Esta configuración permite generar una clase de configuración durante el proceso de compilación. Esta clase, llamada BuildConfig, contiene valores estáticos que se pueden utilizar para condicionar la compilación de diferentes partes de tu código en función de la configuración de compilación (por ejemplo, si estás compilando para depuración o lanzamiento).
 
 ![image](https://github.com/jose-jhr/ERROR_OPENCV/assets/66834393/0cc02394-7131-4ecb-9116-fbe632ee83bb)
+
+
+private void starCamera() {
+        cameraJhr.addlistenerBitmap(new BitmapResponse() {
+            @Override
+            public void bitmapReturn(@Nullable Bitmap bitmap) {
+                Mat mat = new Mat();
+                Utils.bitmapToMat(bitmap,mat);
+                Imgproc.cvtColor(mat,mat,Imgproc.COLOR_BGR2GRAY);
+                Utils.matToBitmap(mat,bitmap);
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        imgBitmap.setImageBitmap(bitmap);
+                    }
+                });
+            }
+        });
+        cameraJhr.initBitmap();
+        cameraJhr.start(0,0,previewImg,true,false,true);
+    }
