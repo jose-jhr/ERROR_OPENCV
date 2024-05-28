@@ -2,11 +2,6 @@
 
 https://opencv.org/releases/
 
-```
-plugins {
-    id 'org.jetbrains.kotlin.android' version '1.7.10'
-}
-```
 
 Adicionar en error de namespace
 
