@@ -1,5 +1,6 @@
 # ERROR_OPENCV
 
+
 https://opencv.org/releases/
 
 ![image](https://github.com/jose-jhr/ERROR_OPENCV/assets/66834393/d1c5d4fc-6b21-4fb4-8386-52f30017eda9)
@@ -52,4 +53,36 @@ private void starCamera() {
         cameraJhr.initBitmap();
         cameraJhr.start(0,0,previewImg,true,false,true);
     }
+```
+
+
+```Kotlin
+    //Implementation CameraJhr
+    implementation 'com.github.jose-jhr:Library-CameraX:1.0.8'
+
+    // If you want to additionally use the CameraX View class
+    implementation "androidx.camera:camera-view:1.0.0-alpha21"
+```
+
+settings.gradle
+``` Kotlin
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+        maven { url 'https://jitpack.io' }
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+    }
+}
+rootProject.name = "VisualControll"
+include ':app'
+include ':OpenCv'
 ```
